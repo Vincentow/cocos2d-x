@@ -277,6 +277,11 @@ CC_CONSTRUCTOR_ACCESS:
     /** initializes a TMX Tiled Map with a TMX formatted XML string and a path to TMX resources */
     bool initWithXML(const std::string& tmxString, const std::string& resourcePath);
 
+	/** Set all tile animations enabled or not.
+	 *  animations are not enabled by default
+	 */
+	void setTileAnimEnabled(bool enabled);
+
 protected:
     TMXLayer * parseLayer(TMXLayerInfo *layerInfo, TMXMapInfo *mapInfo);
     TMXTilesetInfo * tilesetForLayer(TMXLayerInfo *layerInfo, TMXMapInfo *mapInfo);
